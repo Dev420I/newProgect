@@ -116,6 +116,11 @@ img
     margin-right: auto;
 }
 
+.grid
+{
+    display: grid;
+}
+
 /*======= HEADER & NAV==============*/
 .header
 {
@@ -129,11 +134,155 @@ img
 .nav
 {
     height: calc(var(--header-height)+ 2.5rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 3rem;
 }
+
+.nav__logo{
+    display:inline-flex;
+    align-items: center;
+    width: 150px;
+}
+
+.nav__list
+{
+    display: flex;
+    column-gap: 2rem;
+}
+
+.nav__link
+{
+    position: relative;
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+    transition: .4s;
+}
+
+.nav__link:hover
+{
+    color: var(--first-color);
+}
+
+.nav__close,
+.nav__toggle
+{
+    color: var(--title-color);
+}
+
+.nav__toggle
+{
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.nav__close,
+.nav__toggle
+{
+    display: none;
+}
+
+/* Active link */
+.nav__link:hover::before,
+.nav__link::before
+{
+    content: '';
+    position: absolute;
+    bottom:  -.5rem;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--ferst-color);
+    border-radius: 56%;
+    transition: .4s;
+}
+.nav__link:hover::before,
+.active-link::before
+{
+    width: 30px;
+}
+.active-link
+{
+    color: var(--ferst-color);
+}
+
+
 /*======= HOME ==============*/
+.home
+{
+    padding: 12.5rem 0 2rem;
+}
+
+.home__container
+{
+grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+}
+
+.home__subtitle,
+.home__title
+{
+    font-size: var(--biggest-font-size);
+    line-height: 68px;
+    font-weight: var(--font-light);
+}
+
+.home__subtitle
+{
+    margin-bottom: .75rem ;
+}
+
+.home__title
+{
+    margin-bottom: 2rem;
+}
+
+.home__title span
+{
+    font-weight: var(--font-medium);
+}
+
+.home__buttons
+{
+    display: flex;
+    flex-direction:column;
+    row-gap: .25rem;
+}
+
+.home__buttons span
+{
+    color: var(--ferst-color);
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-medium);
+}
+
+.home__buttons span:nth-child(2)
+{
+    opacity: .7;
+}
+
+.home__buttons span:nth-child(3)
+{
+    opacity: .4;
+}
+.home__images
+{
+    grid-template-columns: 4fr 8fr;
+    column-gap: 1.875rem;
+}
+
 
 /*======= BUTTONS ==============*/
 
 /*======= ABOUT ==============*/
 
 /*======= SERVICES ==============*/
+
+/*======= WORK ==============*/
+
+/*======= LIGHTBOX ==============*/
+
+/*======= PROGECT ==============*/
+
+/*======= EXPIRIANS ==============*/
