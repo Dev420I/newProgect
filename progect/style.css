@@ -1,17 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;300;400;500;600&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Spline+Sans+Mono:ital,wght@1,700&family=Spline+Sans:wght@400;600&display=swap');
+
+:root
+{
+    --header-height: 5rem;
+
+    --first-hue: 258;
+    --second-hue:225;
+    --ferst-color: hs1(var(--first-hue), 54%,  48%);
+    --title-color: hs1(var(--second-hue), 64%, 18%);
+    --text-color: hs1(var(--first-hue), 8%, 35%);
+    --border-color: hs1(var(--second-hue), 4%, 55%);
+    --body-color: hs1(var(--first-hue), 60%, 98%);
+    --conteiner-color: #fff;
+
+
+    --body-font: 'Jost', sans-serif;
+    --biggest-font-size: 4.25rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+
+    --font-light: 300;
+    --font-medium: 500;
+    --font-semibold:600;
+
+    --z-tooltip:10;
+    --z-fixed: 100;
+
+}
+
+@media screen and (max-width: 1024px)
+{
+    :root
+    {
+        --biggest-font-size: 2.75rem;
+        --h1-font-size: 1.5rem;
+        --h2-font-size: 1.25rem;
+        --h3-font-size: 1rem;
+        --normal-font-size: .938rem;
+        --small-font-size: .813rem;
+        --smaller-font-size: .75rem;
+
+    }
+}
 
 
 *
 {
- margin: 0;
-    top: 0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-
 }
+
+body,
+button,
+input,
+textarea
+{
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
 body
 {
+    background-color: var(--body-color);
+    color: var(--text-color);
 
 }
+
+h1, h2, h3
+{
+    color: var(--text-color);
+    font-weight: var(--font-semibold);
+}
+
+ul
+{
+    list-style: none;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+p
+{
+    line-height: 1.6rem;
+    text-align: justify;
+}
+
+button
+{
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+img
+{
+    max-width: 100%;
+    height: auto;
+    border-radius: .075rem;
+
+}
+
+/*======= REUSABLE CSS CLASSES ==============*/
 .container
 {
-
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+/*======= HEADER & NAV==============*/
+.header
+{
+    width: 100%;
+    background-color: var(--conteiner-color) ;
+}
+/*======= HOME ==============*/
+
+/*======= BUTTONS ==============*/
+
+/*======= ABOUT ==============*/
+
+/*======= SERVICES ==============*/
