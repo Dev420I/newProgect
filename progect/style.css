@@ -6,11 +6,11 @@
 
     --first-hue: 258;
     --second-hue:225;
-    --ferst-color: hs1(var(--first-hue), 54%,  48%);
-    --title-color: hs1(var(--second-hue), 64%, 18%);
-    --text-color: hs1(var(--first-hue), 8%, 35%);
-    --border-color: hs1(var(--second-hue), 4%, 55%);
-    --body-color: hs1(var(--first-hue), 60%, 98%);
+    --ferst-color: hsl(var(--first-hue), 54%,  48%);
+    --title-color: hsl(var(--second-hue), 64%, 18%);
+    --text-color: hsl(var(--first-hue), 8%, 35%);
+    --border-color: hsl(var(--second-hue), 4%, 55%);
+    --body-color: hsl(var(--first-hue), 60%, 98%);
     --conteiner-color: #fff;
 
 
@@ -121,6 +121,14 @@ img
 {
     width: 100%;
     background-color: var(--conteiner-color) ;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+}
+.nav
+{
+    height: calc(var(--header-height)+ 2.5rem);
 }
 /*======= HOME ==============*/
 
