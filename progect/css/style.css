@@ -805,3 +805,13 @@ font-size: 1.8rem;
     display: block;
     margin-bottom: .5rem;
 }
+
+.footer
+{
+    background-color: var(--ferst-color);
+}
+
+.footer__container
+{
+    padding: 2rem 0 2rem;
+}
