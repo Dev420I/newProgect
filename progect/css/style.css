@@ -55,6 +55,11 @@
     box-sizing: border-box;
 }
 
+html
+{
+    scroll-behavior: smooth;
+}
+
 body,
 button,
 input,
@@ -893,16 +898,6 @@ font-size: 1.8rem;
     font-size: var(--small-font-size);
 }
 
-
-
-
-
-
-
-
-
-
-
 @media screen  and (max-width: 1208px){
  .container
  {
@@ -1055,8 +1050,6 @@ font-size: 1.8rem;
         height: var(--header-height);
     }
 
-
-
     .nav__menu
     {
         position: fixed;
@@ -1067,6 +1060,12 @@ font-size: 1.8rem;
         height: 100%;
         padding: 4rem 0 0 3rem;
         box-shadow: -2px 0 4px hsla(250, 24%, 15%, .1);
+        transition: .4s;
+    }
+
+    .show-menu
+    {
+        right: 0;
     }
 
     .nav__list
@@ -1129,10 +1128,122 @@ font-size: 1.8rem;
         grid-template-columns: 1fr;
         row-gap: 2.5rem;
     }
+
+    .about__img
+    {
+        width: 250px;
+    }
+
+    .services__item
+    {
+        grid-template-columns: 1fr;
+        row-gap: 1.875rem;
+    }
+
+    .services__img
+    {
+       width:  350px;
+    }
+
+    .project
+    {
+        padding: 4.5rem 3rem;
+    }
+
+    .qualification__container
+    {
+        grid-template-columns: 1fr;
+        row-gap: 2.5rem;
+    }
+
+    .contact__container
+    {
+        grid-template-columns: 1fr;
+       row-gap: 3rem;
+    }
+
+    .contact__info
+    {
+        order: -1;
+    }
 }
 @media screen  and (max-width: 576px){
 
+    .home__title
+    {
+        line-height: 60px;
+        margin-bottom: 1rem;
+    }
+
+    .home__subtitle
+    {
+        margin-bottom: .5rem;
+    }
+
+    .home__social
+    {
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 1.2rem;
+    }
+
+    .home__social-follow::after
+    {
+        display: none;
+    }
+
+    .about__award
+    {
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+    }
+
+    .services__img
+    {
+        width: 300px;
+    }
+
+    .work__container
+    {
+        column-count: 2;
+    }
+
+    .contact__form-group
+    {
+        grid-template-columns: 1fr;
+
+    }
 }
 @media screen  and (max-width: 350px){
+   .container
+   {
+       margin-left: 1rem;
+       margin-right: 1rem;
+   }
 
+    .home__img
+    {
+        width: 140px;
+    }
+
+    .slider__img
+    {
+        width: 200px;
+    }
+
+    .services__button.services__active::before,
+    .services__button:hover::before
+    {
+        width: 60px;
+    }
+
+    .services__button
+    {
+        padding-right: 1rem;
+    }
+
+    .work__container
+    {
+        column-count: 1;
+    }
 }
